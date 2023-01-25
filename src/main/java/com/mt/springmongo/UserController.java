@@ -29,8 +29,6 @@ public class UserController {
                        @RequestParam("email") String email) {
 
     	logger.info("Creating user name: "+firstName);
-        logger.info("Creating user lastname: "+lastName);
-        logger.info("Creating user email: "+email);
         User user = new User(firstName, lastName, email);
         userRepository.save(user);
 
